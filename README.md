@@ -89,4 +89,4 @@ To publish this library to PyPI so others can install it via `pip`:
 After publishing, users can install your library with:
 
 ```
-pip install folder_utils
+pip install folder-utils
