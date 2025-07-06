@@ -13,10 +13,10 @@ pip install -e .
 ## Usage
 
 ```python
-from folder_utils import FolderManager
+from fm import FM
 
-# Create an instance of FolderManager
-fm = FolderManager()
+# Create an instance of FM
+fm = FM()
 
 # Create a folder
 fm.create_folder("my_directory")
@@ -31,6 +31,17 @@ fm.copy_file("source.txt", "destination.txt")
 # Move a file
 fm.move_file("destination.txt", "new_location.txt")
 
+# Rename a file or folder
+fm.rename("old_name.txt", "new_name.txt")
+
+# Check if a file or folder exists
+exists = fm.exists("my_directory")
+print(exists)
+
+# Get detailed information about a file
+info = fm.get_file_info("source.txt")
+print(info)
+
 # Delete a folder
 fm.delete_folder("my_directory")
 ```
@@ -42,6 +53,9 @@ fm.delete_folder("my_directory")
 - List files in a folder with optional extension filtering
 - Copy files
 - Move files
+- Rename files or folders
+- Check existence of files or folders
+- Get detailed file information (size, creation date, modification date)
 
 ## Requirements
 
